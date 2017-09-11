@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 //@Mapper 可以注释掉 在springboot中统一加载
 public interface TopicDao {
     public Long delete(@Param("id") Long id);
+
 }
 
 

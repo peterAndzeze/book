@@ -5,6 +5,7 @@ import com.book.common.model.BaseModel;
 /**
  * Created by wodezuiaishinageren on 2017/9/11.
  */
+
 public class UserModel extends BaseModel {
     private Long id;
     private String userName;

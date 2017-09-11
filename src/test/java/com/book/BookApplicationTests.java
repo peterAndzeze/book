@@ -4,6 +4,7 @@ import com.book.dao.BookDao;
 import com.book.model.BookModel;
 import com.book.topic.dao.TopicDao;
 import com.book.user.dao.UserDao;
+import com.book.user.model.UserModel;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -57,6 +58,17 @@ public class BookApplicationTests {
 		Long count=topicDao.delete(1L);
 		Assert.assertNotNull(count);
 		System.out.println(count);
+	}
+
+	@Test
+	public void getUserById() {
+		UserModel userModel=userDao.getUserModel(1l);
+		Optional optional=Optional.ofNullable(userModel);
+		if(optional.isPresent()) {
+			System.out.println(userModel.getUserName()+"*******************");
+		}else {
+			System.out.println("bu cunzai ");
+		}
 	}
 
 }
